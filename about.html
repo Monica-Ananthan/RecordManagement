@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>About and security – VaultRecords</title>
+    <meta
+      name="description"
+      content="Secure records storage, retrieval and digitization."
+    />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/theme.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body data-page="about">
+    <div id="prog"></div>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-box" viewBox="0 0 24 24">
+          <path
+            d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Zm0 0 9 4.5 9-4.5M12 12v9"
+          />
+        </symbol>
+        <symbol id="i-truck" viewBox="0 0 24 24">
+          <path d="M2 6h11v9H2zM13 9h4l4 3v3h-8M6.5 18.5h.01M17.5 18.5h.01" />
+        </symbol>
+        <symbol id="i-scan" viewBox="0 0 24 24">
+          <path
+            d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"
+          />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24">
+          <path
+            d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6L12 3Zm-3 9 2.2 2.2L15.5 10"
+          />
+        </symbol>
+        <symbol id="i-doc" viewBox="0 0 24 24">
+          <path d="M7 3h7l4 4v14H7zM14 3v4h4M9.5 12h5M9.5 16h5" />
+        </symbol>
+        <symbol id="i-card" viewBox="0 0 24 24">
+          <path d="M3 6h18v12H3zM3 10h18M7 15h3" />
+        </symbol>
+        <symbol id="i-cog" viewBox="0 0 24 24">
+          <path
+            d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"
+          />
+        </symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24">
+          <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 7v5l3 2" />
+        </symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24">
+          <path d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3" />
+        </symbol>
+        <symbol id="i-eye" viewBox="0 0 24 24">
+          <path
+            d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12ZM12 14.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+          />
+        </symbol>
+        <symbol id="i-fire" viewBox="0 0 24 24">
+          <path
+            d="M12 21c-3.9 0-6.5-2.6-6.5-6 0-3 2-4.6 3.5-7 .5 1.5 1.5 2.5 2.5 3 0-3 1-5 3-7 .5 3.5 4 5.5 4 10.5 0 3.4-2.6 6.5-6.5 6.5Z"
+          />
+        </symbol>
+        <symbol id="i-temp" viewBox="0 0 24 24">
+          <path d="M10 14V5a2 2 0 1 1 4 0v9a4 4 0 1 1-4 0Z" />
+        </symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24">
+          <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </symbol>
+      </defs>
+    </svg>
+    <header class="hd">
+      <div class="wrap">
+        <a class="lg" href="index.html"
+          ><img
+            src="img/logo-mark.svg"
+            alt=""
+            width="34"
+            height="34"
+          />VaultRecords</a
+        >
+        <nav class="nv" aria-label="Main">
+          <a href="index.html">Home</a><a href="services.html">Services</a
+          ><a href="about.html" class="on">Security</a
+          ><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
+        </nav>
+        <div class="sp" style="display: flex; gap: 8px; align-items: center">
+          <button class="ib" id="tTheme" aria-label="Toggle dark mode">
+            Dark</button
+          ><button class="ib" id="tDir" aria-label="Toggle text direction">
+            RTL</button
+          ><a class="btn s" id="navLogin" href="login.html">Client login</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="bn">
+        <div class="wrap">
+          <div class="bn-in">
+            <div class="bn-tx">
+              <span class="tag">Security</span>
+              <h1>Built around the security of the building</h1>
+              <p>
+                Controlled access, monitoring and a full chain of custody
+                protect every record we hold.
+              </p>
+              <div class="row">
+                <a class="btn" href="contact.html"
+                  >Book a facility tour<svg class="ic arr" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </div>
+            <div class="bn-im">
+              <img
+                src="img/banner-security.jpg"
+                alt="Staff member badging into a monitored records room"
+                style="object-position: 80% 50%"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec">
+        <div class="wrap">
+          <div class="fr">
+            <div class="fi">
+              <img
+                src="img/figure-about-mission.jpg"
+                alt="Records manager checking a box inventory on a tablet"
+              />
+            </div>
+            <div>
+              <h2>Our mission: records you never have to worry about</h2>
+              <p class="mu">
+                We take on the storage, tracking and handling of sensitive
+                business records so your team can get back to work, with a full
+                record of every box and every access.
+              </p>
+              <ul class="ck">
+                <li>Live inventory of every box, from any device</li>
+                <li>Retention dates tracked and destruction approved by you</li>
+                <li>
+                  One account for storage, retrieval, scanning and billing
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec alt" id="security">
+        <div class="wrap">
+          <div class="sh">
+            <h2>Security you can verify</h2>
+            <p class="mu">Six layers of protection on every box we hold.</p>
+          </div>
+          <div class="cards">
+            <div class="card h">
+              <div class="ch">
+                <svg class="ic" aria-hidden="true"><use href="#i-lock" /></svg>
+              </div>
+              <h3>Badge and PIN access</h3>
+              <p>Every entry is logged and reviewed monthly.</p>
+            </div>
+            <div class="card h">
+              <div class="ch">
+                <svg class="ic" aria-hidden="true"><use href="#i-eye" /></svg>
+              </div>
+              <h3>24/7 camera monitoring</h3>
+              <p>Recorded coverage of all storage areas and loading bays.</p>
+            </div>
+            <div class="card h">
+              <div class="ch">
+                <svg class="ic" aria-hidden="true"><use href="#i-temp" /></svg>
+              </div>
+              <h3>Climate controlled</h3>
+              <p>Steady temperature and humidity for paper and media.</p>
+            </div>
+            <div class="card h">
+              <div class="ch">
+                <svg class="ic" aria-hidden="true"><use href="#i-fire" /></svg>
+              </div>
+              <h3>Fire suppression</h3>
+              <p>Water-free systems that protect paper from damage.</p>
+            </div>
+            <div class="card h">
+              <div class="ch">
+                <svg class="ic" aria-hidden="true"><use href="#i-scan" /></svg>
+              </div>
+              <h3>Barcode chain of custody</h3>
+              <p>Each box is scanned at every location it moves through.</p>
+            </div>
+            <div class="card h">
+              <div class="ch">
+                <svg class="ic" aria-hidden="true">
+                  <use href="#i-shield" />
+                </svg>
+              </div>
+              <h3>Certified destruction</h3>
+              <p>Shredding with a certificate, only after your approval.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec">
+        <div class="wrap">
+          <div class="sh">
+            <h2>Privacy and terms</h2>
+            <p class="mu">
+              The short version of how we handle your information and what you
+              can expect from us.
+            </p>
+          </div>
+          <div class="legal-g">
+            <article class="lgl" id="privacy">
+              <header>
+                <span class="ch"
+                  ><svg class="ic" aria-hidden="true">
+                    <use href="#i-lock" /></svg
+                ></span>
+                <div>
+                  <h3>Privacy Policy</h3>
+                  <small>Last updated October 2026</small>
+                </div>
+              </header>
+              <dl>
+                <div>
+                  <dt>What we collect</dt>
+                  <dd>
+                    Contact details, box and request records, and the billing
+                    history needed to run your account.
+                  </dd>
+                </div>
+                <div>
+                  <dt>How we use it</dt>
+                  <dd>
+                    To store, retrieve and scan your records, issue invoices and
+                    keep you updated on requests.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Who can see it</dt>
+                  <dd>
+                    Only staff who need access to serve you. We never sell
+                    client data.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Your choices</dt>
+                  <dd>
+                    Ask us to correct or export your account information at any
+                    time.
+                  </dd>
+                </div>
+              </dl>
+            </article>
+            <article class="lgl" id="terms">
+              <header>
+                <span class="ch"
+                  ><svg class="ic" aria-hidden="true"><use href="#i-doc" /></svg
+                ></span>
+                <div>
+                  <h3>Terms &amp; Conditions</h3>
+                  <small>Last updated October 2026</small>
+                </div>
+              </header>
+              <dl>
+                <div>
+                  <dt>Billing</dt>
+                  <dd>
+                    Storage is billed monthly per box. Retrieval and scanning
+                    are billed once completed.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Destruction</dt>
+                  <dd>
+                    Records are destroyed only after you approve it in writing,
+                    and you receive a certificate.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Access</dt>
+                  <dd>
+                    Only authorized contacts named on your account can request
+                    or receive boxes.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Demo notice</dt>
+                  <dd>
+                    This website is a demonstration and no real records are
+                    held.
+                  </dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="sec" style="padding-bottom: 0">
+        <div class="wrap">
+          <div class="cta">
+            <div>
+              <h2>See the facility for yourself</h2>
+              <p>Book a guided tour and review our controls in person.</p>
+            </div>
+            <div class="row">
+              <a class="btn" href="contact.html"
+                >Get a quote<svg class="ic arr" aria-hidden="true">
+                  <use href="#i-arrow" /></svg></a
+              ><a class="btn ghost" href="pricing.html"
+                >See pricing<svg class="ic arr" aria-hidden="true">
+                  <use href="#i-arrow" /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="ft">
+      <div class="wrap">
+        <div class="ft-g">
+          <div>
+            <a class="lg" href="index.html"
+              ><img
+                src="img/logo-mark.svg"
+                alt=""
+                width="32"
+                height="32"
+              />VaultRecords</a
+            >
+            <p>
+              Secure records storage, retrieval and digitization for
+              organizations that need dependable information management.
+            </p>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="about.html#security">Security</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Client Portal</h4>
+            <ul>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="inventory.html">Inventory</a></li>
+              <li><a href="retrieval.html">Retrieval Requests</a></li>
+              <li><a href="scanning.html">Scanning Requests</a></li>
+              <li><a href="billing.html">Billing</a></li>
+              <li><a href="documents.html">Documents</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="tel:18005550142">1-800-555-0142</a></li>
+              <li>
+                <a href="mailto:records@vaultrecords.example"
+                  >records@vaultrecords.example</a
+                >
+              </li>
+              <li>Mon–Fri, 8:00 to 18:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft-b">
+          <span>© 2026 VaultRecords. All rights reserved.</span
+          ><span
+            ><a href="about.html#privacy">Privacy Policy</a
+            ><a href="about.html#terms">Terms &amp; Conditions</a></span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

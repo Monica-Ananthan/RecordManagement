@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Secure records storage and digitization – VaultRecords</title>
+<meta name="description" content="Secure records storage, retrieval and digitization.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml"><link rel="icon" href="img/favicon.png" type="image/png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
+<script src="js/main.js" defer></script>
+<style>
+/* Home hero refinements (move into css/style.css if preferred) */
+@media(min-width:761px){.bn.hero .bn-in{grid-template-columns:minmax(0,1.05fr) minmax(0,1.25fr)}}
+@media(min-width:761px) and (max-width:999px){.bn.hero .bn-tx{padding:36px 28px 64px}.bn.hero .bn-tx p{font-size:1rem}}
+.bn.hero .bn-tx{padding:56px 44px 80px}
+.bn.hero .row{gap:12px;margin-top:10px}
+.bn.hero .row .btn{white-space:nowrap;padding:11px 18px}
+.bn.hero .fl{bottom:60px}
+.fx{margin-top:-40px}
+.fx>div{display:flex;gap:14px;align-items:flex-start}
+.fx .ch{display:grid;width:40px;height:40px;border-radius:11px;flex:none;color:var(--acc);font-size:0}
+.fx .t{margin:0;min-width:0}
+@media(min-width:1000px){.bn.hero .row{flex-wrap:nowrap}}
+@media(max-width:760px){.bn.hero .bn-tx{padding:26px 22px 44px}.fx{margin-top:-24px}}
+/* Section variations (home page) */
+.pv{background:var(--surf);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shH);overflow:hidden}
+.pv-h{display:flex;align-items:center;gap:6px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surf2);font-size:.8rem;color:var(--mute)}
+.pv-h i{width:9px;height:9px;border-radius:50%;background:var(--line)}.pv-h span{margin-inline-start:8px}
+.pv-s{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px}
+.pv-s div{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.pv-s small{display:block;color:var(--mute);font-size:.74rem}.pv-s b{font-size:1.35rem;font-weight:600;letter-spacing:-.02em}
+.pv-r{list-style:none;margin:0;padding:0 16px 6px}
+.pv-r li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:.88rem}
+.gs{counter-reset:g;grid-template-columns:repeat(3,1fr);gap:36px}
+.gs>.card{counter-increment:g;background:none;border:0;border-top:2px solid var(--line);border-radius:0;box-shadow:none;padding:22px 4px 0}
+.gs>.card::before{content:"0" counter(g);display:block;font-size:2.6rem;font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--acc);opacity:.4;margin-bottom:14px}
+.gs>.card h3{margin:0 0 6px}
+.ind{grid-template-columns:1fr 1fr;gap:30px 56px}
+.ind>.card{background:none;border:0;border-inline-start:3px solid var(--line);border-radius:0;box-shadow:none;padding:2px 0;padding-inline-start:20px;transition:border-color .2s}
+.ind>.card:hover{border-inline-start-color:var(--acc)}.ind>.card h3{margin:0 0 4px}
+@media(min-width:761px){.fr.faq-s{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);align-items:start;gap:56px;margin-bottom:0}}
+@media(max-width:760px){.gs,.ind{grid-template-columns:1fr}.pv-s{grid-template-columns:1fr 1fr 1fr;gap:8px;padding:12px}.pv-s div{padding:10px}}
+/* FAQ (home page) */
+.faq{padding:4px 26px}
+.faq details{border-bottom:1px solid var(--line)}.faq details:last-child{border:0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.3rem;font-weight:400;color:var(--acc);line-height:1;flex:none}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:0 0 18px;color:var(--mute);max-width:70ch}
+</style>
+</head>
+<body data-page="index">
+<div id="prog"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Zm0 0 9 4.5 9-4.5M12 12v9"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v9H2zM13 9h4l4 3v3h-8M6.5 18.5h.01M17.5 18.5h.01"/></symbol>
+<symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6L12 3Zm-3 9 2.2 2.2L15.5 10"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M9.5 12h5M9.5 16h5"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 10h18M7 15h3"/></symbol>
+<symbol id="i-cog" viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 7v5l3 2"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><path d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12ZM12 14.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+<symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 21c-3.9 0-6.5-2.6-6.5-6 0-3 2-4.6 3.5-7 .5 1.5 1.5 2.5 2.5 3 0-3 1-5 3-7 .5 3.5 4 5.5 4 10.5 0 3.4-2.6 6.5-6.5 6.5Z"/></symbol>
+<symbol id="i-temp" viewBox="0 0 24 24"><path d="M10 14V5a2 2 0 1 1 4 0v9a4 4 0 1 1-4 0Z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol></defs></svg>
+<header class="hd"><div class="wrap">
+<a class="lg" href="index.html"><img src="img/logo-mark.svg" alt="" width="34" height="34">VaultRecords</a>
+<nav class="nv" aria-label="Main"><a href="index.html" class=on>Home</a><a href="services.html">Services</a><a href="about.html">Security</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></nav>
+<div class="sp" style="display:flex;gap:8px;align-items:center"><button class="ib" id="tTheme" aria-label="Toggle dark mode">Dark</button><button class="ib" id="tDir" aria-label="Toggle text direction">RTL</button><a class="btn s" id="navLogin" href="login.html">Client login</a></div>
+</div></header>
+<main>
+<section class="bn hero"><div class="wrap"><div class="bn-in"><div class="bn-tx"><span class="tag">Records management &amp; storage</span><h1>Secure records. Smarter management.</h1><p>Climate-controlled storage, same-day retrieval and secure digitization, all managed from one client portal.</p><div class="row"><a class="btn" href="login.html">Open client portal<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="services.html">View services<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div><div class="bn-im"><img src="img/banner-home.jpg" alt="Aisles of barcoded archive boxes in a records facility" style="object-position:50% 50%"><div class="fl"><div class="ch"><svg class="ic" aria-hidden="true"><use href="#i-scan"/></svg></div><span>Every box barcode-tracked in and out of storage</span></div></div></div></div></section>
+<div class="wrap"><div class="fx"><div><span class="ch"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><p class="t"><b>Badge and PIN access</b><span>Every entry is logged and reviewed.</span></p></div><div><span class="ch"><svg class="ic" aria-hidden="true"><use href="#i-temp"/></svg></span><p class="t"><b>Climate controlled</b><span>Stable temperature and humidity.</span></p></div><div><span class="ch"><svg class="ic" aria-hidden="true"><use href="#i-fire"/></svg></span><p class="t"><b>Fire suppression</b><span>Water-free systems protect paper.</span></p></div><div><span class="ch"><svg class="ic" aria-hidden="true"><use href="#i-scan"/></svg></span><p class="t"><b>Barcode custody</b><span>Scanned at every handoff.</span></p></div></div></div>
+<section class="sec"><div class="wrap"><div class="sh"><h2>Everything your records need</h2><p class="mu">Store it, find it, or turn it into a searchable file. Manage all of it online.</p></div><div class="cards">
+<a class="card h sc" href="services.html"><div class="sc-i"><img src="img/figure-services-storage.jpg" alt="Barcoded archive boxes on metal shelving" style="object-position:50% 50%"></div><div class="sc-b"><span class="sc-l">Secure and organized</span><h3>Physical storage</h3><p>Barcoded boxes on managed shelving, with retention dates tracked for you.</p><span class="more">Learn more<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></a><a class="card h sc" href="services.html"><div class="sc-i"><img src="img/banner-retrieval.jpg" alt="Staff member lifting an archive box from a shelf" style="object-position:38% 50%"></div><div class="sc-b"><span class="sc-l">Fast and reliable</span><h3>Retrieval</h3><p>Request a box or a single file online. Deliver, view on site, or return.</p><span class="more">Learn more<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></a><a class="card h sc" href="services.html"><div class="sc-i"><img src="img/figure-services-scanning.jpg" alt="Operator scanning a bound book" style="object-position:50% 50%"></div><div class="sc-b"><span class="sc-l">Smart and accessible</span><h3>Digitization</h3><p>High-volume scanning to searchable PDF, with originals returned or destroyed.</p><span class="more">Learn more<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></a></div></div></section>
+<section class="sec alt"><div class="wrap"><div class="fr"><div><h2>Your portal, always up to date</h2><p class="mu">See every box, track every request and pay invoices in one place, from any device.</p><ul class="ck"><li>See every box and where it sits</li><li>Follow each request from pending to delivered</li><li>Pay invoices and download your documents</li></ul><div class="row"><a class="btn" href="login.html">Open client portal<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div>
+<div class="pv" aria-hidden="true"><div class="pv-h"><i></i><i></i><i></i><span>Client dashboard preview</span></div>
+<div class="pv-s"><div><small>Total boxes</small><b>10</b></div><div><small>Active retrievals</small><b>1</b></div><div><small>Balance due</small><b>$614.90</b></div></div>
+<ul class="pv-r"><li><b>Retrieval RT-20312</b><span class="pill wn">In progress</span></li><li><b>Scanning SC-30088</b><span class="pill wn">In progress</span></li><li><b>Invoice INV-4098</b><span class="pill ok">Paid</span></li></ul></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="sh"><h2>Getting started is simple</h2><p class="mu">From first call to a fully tracked inventory, in three steps.</p></div><div class="cards gs"><div class="card"><h3>Tell us what you have</h3><p>Share your box count and what needs scanning, and we send you a clear quote.</p></div><div class="card"><h3>We collect and catalogue</h3><p>We pick up your records, barcode every box and give it a shelf location.</p></div><div class="card"><h3>Manage it online</h3><p>Log in to see your inventory, request retrievals and order scanning.</p></div></div></div></section>
+<section class="sec alt"><div class="wrap"><div class="sh"><h2>Trusted with sensitive records</h2><p class="mu">Built for organizations where the paperwork matters.</p></div><div class="cards ind"><div class="card"><h3>Healthcare</h3><p>Patient files held under strict access control and tracked from shelf to desk.</p></div><div class="card"><h3>Legal</h3><p>Case files and contracts with a clear chain of custody and retention dates.</p></div><div class="card"><h3>Finance</h3><p>Tax, audit and invoice records kept for as long as regulations require.</p></div><div class="card"><h3>Public sector and education</h3><p>Long-lived records with scheduled, certified destruction.</p></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="fr faq-s"><div><h2>Frequently asked questions</h2><p class="mu">Quick answers about requests, scanning, security and cost.</p><a class="btn s" href="contact.html">Contact our team<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><div class="panel faq"><details><summary>How do I request a box?</summary><p>Sign in to the client portal, choose the box and pick a delivery option. Next-day delivery is included, and rush same-day delivery is available for an extra fee.</p></details><details><summary>Can you scan documents instead of delivering the box?</summary><p>Yes. Request scanning for any box and the finished files appear in your Documents page. You choose whether the originals go back on the shelf or are destroyed.</p></details><details><summary>How do I know my records are secure?</summary><p>Every facility uses badge and PIN access, camera monitoring, climate control and fire suppression, and each box is barcode-scanned whenever it moves. <a href="about.html#security" style="color:var(--acc)">See our security details</a>.</p></details><details><summary>What does it cost?</summary><p>Storage, retrieval and scanning are priced separately, with no setup fee on accounts over 100 boxes. <a href="pricing.html" style="color:var(--acc)">View pricing</a>.</p></details><details><summary>What happens when a retention period ends?</summary><p>The box is listed in your portal for approval. Nothing is destroyed until you approve it, and you receive a certificate of destruction afterwards.</p></details></div></div></div></section>
+<section class="sec" style="padding-bottom:0"><div class="wrap"><div class="cta"><div><h2>Ready to move your records?</h2><p>Tell us how many boxes you have and we will send a quote.</p></div><div class="row"><a class="btn" href="contact.html">Get a quote<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn ghost" href="pricing.html">See pricing<svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div></div></section>
+</main>
+<footer class="ft"><div class="wrap">
+<div class="ft-g">
+<div><a class="lg" href="index.html"><img src="img/logo-mark.svg" alt="" width="32" height="32">VaultRecords</a><p>Secure records storage, retrieval and digitization for organizations that need dependable information management.</p></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html#security">Security</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div><h4>Client Portal</h4><ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="inventory.html">Inventory</a></li><li><a href="retrieval.html">Retrieval Requests</a></li><li><a href="scanning.html">Scanning Requests</a></li><li><a href="billing.html">Billing</a></li><li><a href="documents.html">Documents</a></li></ul></div>
+<div><h4>Contact</h4><ul><li><a href="tel:18005550142">1-800-555-0142</a></li><li><a href="mailto:records@vaultrecords.example">records@vaultrecords.example</a></li><li>Mon–Fri, 8:00 to 18:00</li></ul></div>
+</div>
+<div class="ft-b"><span>© 2026 VaultRecords. All rights reserved.</span><span><a href="about.html#privacy">Privacy Policy</a><a href="about.html#terms">Terms &amp; Conditions</a></span></div>
+</div></footer>
+</body>
+</html>
