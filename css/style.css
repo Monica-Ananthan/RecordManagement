@@ -2480,9 +2480,21 @@ html[data-theme="dark"] .bar i {
     font-weight: 600;
     color: var(--acc);
   }
+  #inven .tb {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 12px; 
+  width: 100%;
+}
+#inven #q{
+  grid-column: 1 / -1; 
+  width: 100%;
+  box-sizing: border-box;
+}
   .tb select {
     flex: 1;
     width: 100%;
+    box-sizing: border-box;
   }
   .pager {
     justify-content: center;
