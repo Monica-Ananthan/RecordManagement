@@ -1757,9 +1757,10 @@ html[data-theme="dark"] {
   }
 }
 
-#kpis {
+/* #kpis {
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-}
+} */
+
 .kpi {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -2630,6 +2631,7 @@ html[data-theme="dark"] .bar i {
   justify-self: center; 
   width: 100%;    
 }
+#kpis .stat b,
 #bsum .stat b {
     font-size: 1rem;
 }

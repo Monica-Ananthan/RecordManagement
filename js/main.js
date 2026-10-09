@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ---- Floating Back to Top button (shared across all pages) ---- */
 (function () {
   var BUTTON_ID = 'vr-back-to-top';
-  var SHOW_AFTER = 240;
+  var SHOW_AFTER = 200;
 
   function initBackToTop() {
     // Prevent duplicate buttons.
