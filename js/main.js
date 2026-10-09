@@ -209,3 +209,90 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+/* ---- Floating Back to Top button (shared across all pages) ---- */
+(function () {
+  var BUTTON_ID = 'vr-back-to-top';
+  var SHOW_AFTER = 240;
+
+  function initBackToTop() {
+    // Prevent duplicate buttons.
+    var button = document.getElementById(BUTTON_ID);
+
+    if (!button) {
+      button = document.createElement('button');
+      button.id = BUTTON_ID;
+      button.type = 'button';
+      button.className = 'back-to-top';
+      button.setAttribute('aria-label', 'Back to top');
+      button.setAttribute('title', 'Back to top');
+
+      // Arrow-up SVG icon.
+      button.innerHTML =
+        '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+        '<path d="M12 19V5M5.5 11.5 12 5l6.5 6.5" />' +
+        '</svg>';
+
+      button.hidden = true;
+      document.body.appendChild(button);
+    }
+
+    // Prevent duplicate event listeners.
+    if (button.dataset.initialized === 'true') return;
+    button.dataset.initialized = 'true';
+
+    function updateVisibility() {
+      var scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
+
+      var shouldShow = scrollTop > SHOW_AFTER;
+
+      button.hidden = !shouldShow;
+      button.classList.toggle('is-visible', shouldShow);
+      button.setAttribute(
+        'aria-hidden',
+        shouldShow ? 'false' : 'true'
+      );
+
+      if (!shouldShow && document.activeElement === button) {
+        button.blur();
+      }
+    }
+
+    // Smoothly scroll to the top when clicked.
+    button.addEventListener('click', function () {
+      var reduceMotion =
+        window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      window.scrollTo({
+        top: 0,
+        behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+    });
+
+    // Update visibility while scrolling.
+    window.addEventListener('scroll', updateVisibility, {
+      passive: true
+    });
+
+    window.addEventListener('pageshow', updateVisibility);
+
+    updateVisibility();
+  }
+
+  // Wait until the document is ready.
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded',
+      initBackToTop,
+      { once: true }
+    );
+  } else {
+    initBackToTop();
+  }
+})();
