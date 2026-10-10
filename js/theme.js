@@ -5,6 +5,9 @@
   function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   root.dataset.theme = get('vr_theme', matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
   root.dir = get('vr_dir', 'ltr');
+  var hide = document.createElement('style');
+  hide.textContent = '#tTheme{font-size:0}';
+  document.head.appendChild(hide);
   document.addEventListener('DOMContentLoaded', function () {
     var bt = document.getElementById('tTheme'), bd = document.getElementById('tDir');
     if (!bt || !bd) return;
