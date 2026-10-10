@@ -5,9 +5,21 @@
   function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   root.dataset.theme = get('vr_theme', matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
   root.dir = get('vr_dir', 'ltr');
+  /* Stop the header from visibly jumping while the page loads.
+     - the fallback "Dark" text on the toggle is hidden from the first paint (only the icon shows)
+     - the menu mode is switched on immediately, so the nav is not shown and then collapsed
+     - header controls stay invisible (their space is reserved) until every script has finished
+       adding the menu button, bell and icons, so they appear once, already in place. */
+  root.classList.add('js-menu', 'hd-wait');
   var hide = document.createElement('style');
-  hide.textContent = '#tTheme{font-size:0}';
+  hide.textContent = '#tTheme{font-size:0}.hd-wait .hd .wrap{visibility:hidden}';
   document.head.appendChild(hide);
+  function ready() {
+    if (!document.querySelector('.menu-btn')) root.classList.remove('js-menu'); /* no menu on this page */
+    requestAnimationFrame(function () { root.classList.remove('hd-wait'); });
+  }
+  document.addEventListener('DOMContentLoaded', function () { setTimeout(ready, 0); });
+  setTimeout(function () { root.classList.remove('hd-wait'); }, 1500); /* safety net */
   document.addEventListener('DOMContentLoaded', function () {
     var bt = document.getElementById('tTheme'), bd = document.getElementById('tDir');
     if (!bt || !bd) return;

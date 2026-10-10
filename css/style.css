@@ -2647,6 +2647,7 @@ html[data-theme="dark"] .bar i {
 #bsum .stat b {
     font-size: 1rem;
 }
+.hd .wrap,
 .hd .wrap > .sp{
   gap: 5px !important;
 }
